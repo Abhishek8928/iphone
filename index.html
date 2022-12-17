@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="iphone.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>iphone website</title>
 </head>
 
@@ -97,7 +98,7 @@
 
 
     <!-- hero-container -->
-    <section>
+    <section >
         <div class="hero-wrapper">
 
             <div class="hero-container">
@@ -145,6 +146,34 @@
     </div>
        
     </section>
+
+
+    <script>
+        let t1 = gsap.timeline();
+        t1.from(".flex-container",{
+            opacity:0,
+            y:20
+           })
+           .from(".container",{
+            opacity:0,
+            x:20,
+            delay:0.5
+           })
+           .from(".banner-wrapper",{
+            ease:Power3.easeOut,
+            opacity:0,
+            color:black,
+            y:20
+           })
+           .from(".hero-container",{
+            opacity:0,
+            x:-20
+           })
+           .from(".second-container",{
+            opacity:0,
+            scale:0.8
+           })
+    </script>
 </body>
 
 </html>
